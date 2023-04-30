@@ -1,0 +1,74 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextLabel_2 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.232137129, 0, 0.307718962, 0)
+Frame.Size = UDim2.new(0, 400, 0, 200)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(50, 50, 50)
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.120
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel.BorderColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel.Position = UDim2.new(0.0449999981, 0, 0.0300000012, 0)
+TextLabel.Size = UDim2.new(0, 363, 0, 38)
+TextLabel.Font = Enum.Font.PermanentMarker
+TextLabel.Text = "Ash's Script Hub"
+TextLabel.TextColor3 = Color3.fromRGB(100, 100, 100)
+TextLabel.TextSize = 60.000
+
+local function myfunction()
+    print("Hello, world!")
+end
+
+local TextButton = Instance.new("TextButton")
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextButton.BorderColor3 = Color3.fromRGB(50, 50, 50)
+TextButton.Position = UDim2.new(0.0450000018, 0, 0.275000006, 0)
+TextButton.Size = UDim2.new(0, 363, 0, 90)
+TextButton.Font = Enum.Font.PermanentMarker
+TextButton.Text = "Execute Script"
+TextButton.TextColor3 = Color3.fromRGB(125, 125, 125)
+TextButton.TextSize = 69.000
+
+TextButton.MouseButton1Click:Connect(function()
+    -- Insert the path to your script below
+    require(game:GetService("ReplicatedStorage").loadstring(game:HttpGet("https://pastebin.com/raw/r1NqK58H"))
+).myfunction()
+end)
+
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel_2.BorderColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel_2.Position = UDim2.new(0.0449999981, 0, 0.774999976, 0)
+TextLabel_2.Size = UDim2.new(0, 363, 0, 38)
+TextLabel_2.Font = Enum.Font.PermanentMarker
+TextLabel_2.Text = "discord.gg/YhkTupggzZ"
+TextLabel_2.TextColor3 = Color3.fromRGB(100, 100, 100)
+TextLabel_2.TextSize = 45.000
+
+TextButton.MouseButton1Down:connect(function()
+	
+	
+	
+end)
