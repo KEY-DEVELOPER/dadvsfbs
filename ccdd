@@ -52,8 +52,7 @@ TextButton.TextSize = 69.000
 
 TextButton.MouseButton1Click:Connect(function()
     -- Insert the path to your script below
-    require(game:GetService("ReplicatedStorage").loadstring(game:HttpGet("https://pastebin.com/raw/r1NqK58H"))
-).myfunction()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/KEY-DEVELOPER/dadvsfbs/main/ccdd")(
 end)
 
 
