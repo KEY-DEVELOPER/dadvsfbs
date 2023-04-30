@@ -52,7 +52,7 @@ TextButton.TextSize = 69.000
 
 TextButton.MouseButton1Click:Connect(function()
     -- Insert the path to your script below
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/KEY-DEVELOPER/dadvsfbs/main/ccdd")(
+    loadstring(game:HttpGet("https://pastebin.com/raw/r1NqK58H"))
 end)
 
 
