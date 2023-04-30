@@ -35,10 +35,6 @@ TextLabel.Text = "Ash's Script Hub"
 TextLabel.TextColor3 = Color3.fromRGB(100, 100, 100)
 TextLabel.TextSize = 60.000
 
-local function myfunction()
-    print("Hello, world!")
-end
-
 local TextButton = Instance.new("TextButton")
 TextButton.Parent = Frame
 TextButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
@@ -49,11 +45,19 @@ TextButton.Font = Enum.Font.PermanentMarker
 TextButton.Text = "Execute Script"
 TextButton.TextColor3 = Color3.fromRGB(125, 125, 125)
 TextButton.TextSize = 69.000
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/KEY-DEVELOPER/gui/main/gui"))()
+local Window = Library:CreateWindow(Config, game:GetService("CoreGui"))
 
-TextButton.MouseButton1Click:Connect(function()
-    -- Insert the path to your script below
-    loadstring(game:HttpGet("https://pastebin.com/raw/r1NqK58H"))
-end)
+local Tab1 = Window:CreateTab("Pet Simulator X")
+local Tab2 = Window:CreateTab("UI Settings")
+
+local Section1 = Tab1:CreateSection("")
+local Section2 = Tab1:CreateSection("")
+local Section3 = Tab2:CreateSection("Menu")
+local Section4 = Tab2:CreateSection("Background")
+local Toggle1 = Section1:CreateToggle("Execute", Settings.Cum, function(State)
+Settings.Cum = State
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KEY-DEVELOPER/Carriatore-hub/main/script")
 
 
 TextLabel_2.Parent = Frame
